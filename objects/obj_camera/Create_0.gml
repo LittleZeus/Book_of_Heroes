@@ -1,0 +1,1 @@
+global.cameraShake = 0;
