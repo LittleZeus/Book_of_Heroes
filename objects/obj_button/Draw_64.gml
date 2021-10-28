@@ -1,15 +1,35 @@
 
 if(greyout) {
-	image_alpha = 0.5;
+	maxAlpha = 0.5
 } else {
-	image_alpha = 1;
+	maxAlpha = 1;
 }
 
-draw_sprite_ext(sprite,0,draw_x,draw_y,draw_xscale,draw_yscale,image_angle,image_blend,image_alpha);
+var curve = animcurve_get_channel(anc_fade,0);
+var alpha = min(maxAlpha,animcurve_channel_evaluate(curve,interactTime/30));
+image_alpha = alpha;
+draw_set_alpha(alpha);
 
+draw_set_colour(text_colour);
+draw_set_font(fText);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
-draw_text(	draw_x + ((sprite_width*global.displayScale)/2),
-			draw_y + ((sprite_height*global.displayScale)/2), text);
+
+if (clicked) 
+{
+	draw_sprite_stretched_ext(sprite,sprite_frame,xx,yy+pressOffset,width,height,image_blend,image_alpha);
+	draw_text(xx+(width/2), yy+(height/2)+pressOffset, text);
+}
+else
+{
+	draw_sprite_stretched_ext(sprite,sprite_frame,xx,yy,width,height,image_blend,image_alpha);
+	draw_text(xx+(width/2), yy+(height/2), text);
+}
+
+draw_set_alpha(1);
+
+sprite_frame = 0; //reset image_index
+
+
 
 

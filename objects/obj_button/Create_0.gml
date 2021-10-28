@@ -1,28 +1,36 @@
 
+container = -1;
 text = "Test";
-
-goto_room = rm_grass;
+loadSlot = -1;
 
 greyout = false;
-
-clicked = false;
+interactTime = 30;
+maxAlpha = 1;
 
 gamePausedImageSpeed = 0;
 
-original_image_blend = image_blend;
-
-original_xscale = image_xscale;
-original_yscale = image_yscale;
-
 sprite = spr_Button;
+sprite_frame = 0;
+text_colour = WHITE;
 
-//draw position
-draw_x=x;
-draw_y=y;
-draw_xscale=image_xscale;
-draw_yscale=image_yscale;
+width = 200;
+height = 60;
 
-image_xscale = image_xscale/global.displayScale;
-image_yscale = image_yscale/global.displayScale;
-x = x/global.displayScale;
-y = y/global.displayScale;
+xx = x;
+yy = y;
+
+clicked = false;
+pressOffset = 4;
+
+testClick = function ()
+{
+	show_debug_message("Button Clicked");
+}
+
+testHover = function ()
+{
+	buttonHoverHighlight();
+}
+
+onClickFunc = testClick;
+hoverFunc = testHover;

@@ -12,3 +12,5 @@ if (global.option_window=="Fullscreen")
 	//TODO borderless
 	window_set_fullscreen(false);
 }
+global.mainmenuButtons = array_create(5,-1);
+global.mainmenuButtons = mainmenu();

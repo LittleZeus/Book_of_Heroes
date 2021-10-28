@@ -1,0 +1,46 @@
+{
+  "spriteId": {
+    "name": "spr_arrow_drop",
+    "path": "sprites/spr_arrow_drop/spr_arrow_drop.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "par_collectable",
+    "path": "objects/par_collectable/par_collectable.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [
+    {"x":0.0,"y":0.0,},
+    {"x":25.0,"y":0.0,},
+    {"x":25.0,"y":25.0,},
+    {"x":0.0,"y":25.0,},
+  ],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"collectScript","path":"objects/par_collectable/par_collectable.yy",},"objectId":{"name":"par_collectable","path":"objects/par_collectable/par_collectable.yy",},"value":"inventoryAdd","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Collectables",
+    "path": "folders/Objects/Entity/Collectables.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "obj_arrow_drop",
+  "tags": [],
+  "resourceType": "GMObject",
+}

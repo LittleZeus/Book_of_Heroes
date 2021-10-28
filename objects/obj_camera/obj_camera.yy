@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Room Objects",
-    "path": "folders/Objects/Room Objects.yy",
+    "name": "Manager",
+    "path": "folders/Objects/Manager.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_camera",

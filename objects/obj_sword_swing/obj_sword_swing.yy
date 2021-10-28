@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "Swing",
-    "path": "sprites/Swing/Swing.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_attack",
-    "path": "objects/obj_attack/obj_attack.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 1,
-  "bbox_right": 493,
+  "bbox_left": 0,
+  "bbox_right": 399,
   "bbox_top": 0,
-  "bbox_bottom": 109,
+  "bbox_bottom": 199,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 500,
-  "height": 110,
+  "width": 400,
+  "height": 200,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a31e8b9d-7855-4b38-8eb9-fa695cc24088","path":"sprites/spr_health_bar/spr_health_bar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a31e8b9d-7855-4b38-8eb9-fa695cc24088","path":"sprites/spr_health_bar/spr_health_bar.yy",},"LayerId":{"name":"b40a5c00-2b34-49ad-8e0a-4ba5ebc0ccd1","path":"sprites/spr_health_bar/spr_health_bar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_health_bar","path":"sprites/spr_health_bar/spr_health_bar.yy",},"resourceVersion":"1.0","name":"a31e8b9d-7855-4b38-8eb9-fa695cc24088","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d964be5f-8bcf-4979-91e9-6bc548fc187e","path":"sprites/spr_health_bar/spr_health_bar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d964be5f-8bcf-4979-91e9-6bc548fc187e","path":"sprites/spr_health_bar/spr_health_bar.yy",},"LayerId":{"name":"b83a82ab-cabe-4ba3-b173-bd00e16bd818","path":"sprites/spr_health_bar/spr_health_bar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_health_bar","path":"sprites/spr_health_bar/spr_health_bar.yy",},"resourceVersion":"1.0","name":"d964be5f-8bcf-4979-91e9-6bc548fc187e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_health_bar","path":"sprites/spr_health_bar/spr_health_bar.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e1d17581-16df-473e-9f89-9590c1dbc56f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a31e8b9d-7855-4b38-8eb9-fa695cc24088","path":"sprites/spr_health_bar/spr_health_bar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"913b4531-b23b-4629-b89f-3b81f77285a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d964be5f-8bcf-4979-91e9-6bc548fc187e","path":"sprites/spr_health_bar/spr_health_bar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,9 +65,33 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b40a5c00-2b34-49ad-8e0a-4ba5ebc0ccd1","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b83a82ab-cabe-4ba3-b173-bd00e16bd818","tags":[],"resourceType":"GMImageLayer",},
   ],
-  "nineSlice": null,
+  "nineSlice": {
+    "left": 10,
+    "top": 10,
+    "right": 10,
+    "bottom": 10,
+    "guideColour": [
+      4294902015,
+      4294902015,
+      4294902015,
+      4294902015,
+    ],
+    "highlightColour": 1728023040,
+    "highlightStyle": 0,
+    "enabled": true,
+    "tileMode": [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "resourceVersion": "1.0",
+    "loadedVersion": null,
+    "resourceType": "GMNineSliceData",
+  },
   "parent": {
     "name": "Health",
     "path": "folders/Sprites/UI/GameUI/Health.yy",

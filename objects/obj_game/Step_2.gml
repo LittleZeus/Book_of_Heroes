@@ -1,19 +1,32 @@
 /// @description Pause the Game
-if (keyboard_check_pressed(vk_escape) and room != rm_mainmenu) {
+if ((keyboard_check_pressed(vk_escape)) &&
+	(!instance_exists(obj_transition)) &&
+	(obj_UI.visible != false)) 
+{
 	
-	global.gamePaused = !global.gamePaused;
+	pauseGame();
 	
-	if (global.gamePaused) {
-		with (all)
-		{	
-			gamePausedImageSpeed = image_speed;
-			if (gamePausedImageSpeed == image_speed) image_speed = 0;
-		}
-	} else {
-		with (all)
-		{	
-			image_speed = gamePausedImageSpeed;
-		}
+}
+
+if(global.gameState == GAMESTATE.GAMEPLAY)
+{
+	global.playTime++;
+}
+
+if ((keyboard_check_pressed(vk_tab)) &&
+	(!instance_exists(obj_transition)) &&
+	(obj_UI.visible != false)) 
+{
+	show_debug_message("pressed tab");
+	if (global.playerInventory.visible)
+	{
+		global.playerInventory.visible = false;
+		global.playerEquipment.visible = false;
+	}
+	else
+	{
+		global.playerInventory.visible = true;
+		global.playerEquipment.visible = true;
 	}
 	
 }
