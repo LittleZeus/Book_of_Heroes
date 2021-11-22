@@ -28,6 +28,7 @@ z = 0;
 invulnerable = 0;
 flash = 0;
 flashShader = sha_WhiteFlash;
+activate = noone;
 
 animationEndScript = -1;
 
@@ -44,11 +45,4 @@ movement_arr[0][0] = 0; // Set movement multiplier, timeing amount -1 = endless
 for (var i = 0; i < 10; ++i;) {
 	movement_arr[i][0] = 1;
 	movement_arr[i][1] = 0;
-}
-
-if (global.iLifted != noone)
-{
-	spriteIdle = spr_player_cast;
-	spriteRun = spr_player_run;
-	sprite_index = spriteIdle;
 }

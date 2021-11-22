@@ -22,8 +22,8 @@ for (var i = 0; i < INVENTORY_SLOTS; i += 1)
 	inventory[i] = new item();
 }
 
-inventory[0].set(ITEMTYPE.USE,spr_item_test,1,"Bomb","Desc: ...Test...","Common",10,EQUIPMENT.HELMET,"Armor:10");
+inventory[0].set(ITEMID.BOMB,ITEMTYPE.USE,spr_item_test,1,"Bomb","Desc: ...Test...","Common",10,EQUIPMENT.HELMET,"Armor:10");
 inventory[0].equipable = true;
 
-inventory[1].set(ITEMTYPE.USE,spr_item_test2,1,"Arrow","Desc: ...Test...","Rare",20,EQUIPMENT.CHEST,"Attack:10");
+inventory[1].set(ITEMID.ARROW,ITEMTYPE.USE,spr_item_test2,1,"Arrow","Desc: ...Test...","Rare",20,EQUIPMENT.CHEST,"Attack:10");
 inventory[1].equipable = true;

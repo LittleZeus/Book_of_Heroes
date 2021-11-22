@@ -1,8 +1,8 @@
 
-function inventorySearch(rootObject,itemType){
+function inventorySearch(rootObject,itemId){
 	for (var i = 0; i < INVENTORY_SLOTS; i += 1)
 	{
-		if (rootObject.inventory[i].type == itemType)
+		if (rootObject.inventory[i].identifier == itemId)
 		{
 			return(i);
 		}
@@ -10,12 +10,13 @@ function inventorySearch(rootObject,itemType){
 	return(-1);
 }
 
-function inventoryRemove(rootObject,itemType) {
-	var _slot = inventorySearch(rootObject,itemType);
+function inventoryRemove(rootObject,itemId) {
+	var _slot = inventorySearch(rootObject,itemId);
 	if (_slot != -1)
 	{
 		with(rootObject)
 		{
+			inventory[_slot].identifier  = -1;
 			inventory[_slot].type  = -1;
 			inventory[_slot].sprite = -1;
 			inventory[_slot].amount = -1;
@@ -30,7 +31,7 @@ function inventoryAdd(rootObject,item) {
 	var _found = true;
 	if (item.amount != -1)
 	{
-		var _slot = inventorySearch(rootObject,item.type);
+		var _slot = inventorySearch(rootObject,item.identifier);
 
 		if (_slot == -1)
 		{
@@ -50,7 +51,7 @@ function inventoryAdd(rootObject,item) {
 				inventory[_slot].amount += item.amount;
 			}
 			else inventory[_slot] = item;
-			show_debug_message("itemType: "+string(item.type)+" itemSprite: "+string(item.sprite)+" itemAmount: "+string(item.amount));
+			show_debug_message("itemIdentifier: "+string(item.identifier)+" itemType: "+string(item.type)+" itemSprite: "+string(item.sprite)+" itemAmount: "+string(item.amount));
 		}
 		return true;
 	}
@@ -72,7 +73,8 @@ function inventoryDrop(xx,yy,itemDrop,inventoryDrag,slotDrag,dropSpeed = 4.5){
 			with (instance_create_layer(xx,yy,"Instances",obj_item)) {
 				direction = _angle;
 				spd = dropSpeed + random(1.5);
-				itemPickup.set(	itemDrop.type,
+				itemPickup.set(	itemDrop.identifier,
+								itemDrop.type,
 								itemDrop.sprite,
 								itemDrop.amount,
 								itemDrop.name,
@@ -83,7 +85,7 @@ function inventoryDrop(xx,yy,itemDrop,inventoryDrag,slotDrag,dropSpeed = 4.5){
 								itemDrop.stats);
 				if (itemDrop.sprite != -1) sprite_index = itemDrop.sprite;
 				collectScriptArg = [global.playerInventory, itemPickup];
-				show_debug_message("itemType: "+string(itemPickup.type)+" itemSprite: "+string(itemPickup.sprite)+" itemAmount: "+string(itemPickup.amount));
+				show_debug_message("itemIdentifier: "+string(itemDrop.identifier)+" itemType: "+string(itemPickup.type)+" itemSprite: "+string(itemPickup.sprite)+" itemAmount: "+string(itemPickup.amount));
 				inventoryDrag.inventory[slotDrag] = new item();
 			}
 		}

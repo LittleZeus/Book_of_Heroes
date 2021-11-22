@@ -37,7 +37,6 @@ global.mouseInMenu = false;
 
 global.mainmenuButtons = -1;
 
-global.iLifted  = noone;
 global.iCamera = instance_create_layer(0,0,layer,obj_camera);
 global.iUI = instance_create_layer(0,0,layer,obj_UI);
 

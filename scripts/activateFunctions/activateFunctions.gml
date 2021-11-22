@@ -1,29 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function activateLiftable(ID){
-	if(global.iLifted == noone) {
-		playerActOutAnimation(spr_player_idle);
-		
-		spriteIdle = spr_player_cast;
-		spriteRun = spr_player_run;
-		
-		global.iLifted = ID;
-		with (global.iLifted) {
-			lifted = true;
-			persistent = true;
-		}
-	}
-}
-
 function activateHatCat(){
 	
-	var _hasHat = (global.iLifted != noone) && (global.iLifted.object_index == obj_hat);
+	//var _hasHat = (global.iLifted != noone) && (global.iLifted.object_index == obj_hat);
 	switch (global.questStatus[? "TheHatQuest"])
 	{
 		case 0: //not started
 		{
 			//player might have brought the hat back anyway
-			if (_hasHat)
+			/*if (_hasHat)
 			{
 				//complete quest
 				newTextBox("Thanks, you found my hat without even asking!",2);
@@ -44,7 +29,7 @@ function activateHatCat(){
 				newTextBox("Hello there! You look like an adventurer!",2);
 				newTextBox("Could you help me find my missing hat?",2,
 							["4:Of course!","5:This task is beneath me"]);
-			}
+			}*/
 			
 		} break;
 		
@@ -58,7 +43,7 @@ function activateHatCat(){
 				global.questStatus[? "TheHatQuest"] = 2;
 				with (obj_questNPC) sprite_index = spr_quest_hat;
 				with (obj_hat) instance_destroy();
-				global.iLifted = noone;
+				//global.iLifted = noone;
 				with (obj_player)
 				{
 					spriteIdle = spr_player_idle;

@@ -32,7 +32,6 @@ function playerStateFree(){
 	}
 	
 	//Active key logic
-	if (keyAct) {
 		//1. check for entity to activate
 		//2. If there is nothing, or no script 
 			//2a. If we are carrying something, throw it!
@@ -40,34 +39,35 @@ function playerStateFree(){
 		//3. Otherwise, Activate script
 		//4. If NPC, face towards us
 		
-		var _activateX = x + lengthdir_x(40, direction);
-		var _activateY = y + lengthdir_y(40, direction);
-		var _activateSize = 16;
-		var _activateList = ds_list_create();
-		activate = noone;
-		var _entitiesFound = collision_rectangle_list(
-								_activateX - _activateSize,
-								_activateY - _activateSize,
-								_activateX + _activateSize,
-								_activateY + _activateSize,
-								par_entity,
-								false,
-								true,
-								_activateList,
-								true);
-		//if the first instance we find is either our lifted entity or it has no script: try the next one.
-		while (_entitiesFound > 0)
+	var _activateX = x + lengthdir_x(40, direction);
+	var _activateY = y + lengthdir_y(40, direction);
+	var _activateSize = 75;
+	var _activateList = ds_list_create();
+	activate = noone;
+	var _entitiesFound = collision_rectangle_list(
+							_activateX - _activateSize,
+							_activateY - _activateSize,
+							_activateX + _activateSize,
+							_activateY + _activateSize,
+							par_entity,
+							false,
+							true,
+							_activateList,
+							true);
+	//if the first instance we find is either our lifted entity or it has no script: try the next one.
+	while (_entitiesFound > 0)
+	{
+		var _check = _activateList[| --_entitiesFound];
+		if (_check.entityActivateScript != -1)
 		{
-			var _check = _activateList[| --_entitiesFound];
-			if (_check != global.iLifted) && (_check.entityActivateScript != -1)
-			{
-				activate = _check;
-				break;
-			}
-		}	
+			activate = _check;
+			break;
+		}
+	}	
 		
-		ds_list_destroy(_activateList);
+	ds_list_destroy(_activateList);
 		
+	if (keyAct) {
 		if (activate != noone) {
 			//Activate Entity
 			scriptExecuteArray(activate.entityActivateScript, activate.entityActiveArgs);

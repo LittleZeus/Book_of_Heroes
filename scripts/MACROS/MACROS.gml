@@ -45,6 +45,14 @@ enum ITEMTYPE
 	EQUIPMENT
 }
 
+// Each unique Item, will stack if same.
+enum ITEMID
+{
+	BOMB,
+	ARROW,
+	TYPE_COUNT
+}
+
 enum STATE
 {
 	FREE,

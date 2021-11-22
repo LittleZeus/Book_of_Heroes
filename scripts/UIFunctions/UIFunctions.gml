@@ -25,6 +25,7 @@ function mainmenu()
 				);
 		global.mainmenuButtons[0].text = "New Game";
 		global.mainmenuButtons[0].onClickFunc = newMenuButton;
+		global.mainmenuButtons[0].sprite = spr_Button_NoEdge;
 		
 		global.mainmenuButtons[1] = instance_create_layer(
 				xx,
@@ -35,6 +36,7 @@ function mainmenu()
 		global.mainmenuButtons[1].text = "Continue";
 		global.mainmenuButtons[1].onClickFunc = continueMenuButton;
 		global.mainmenuButtons[1].loadSlot = getLatestSave();
+		global.mainmenuButtons[1].sprite = spr_Button_NoEdge;
 		if (global.mainmenuButtons[1].loadSlot == -1) global.mainmenuButtons[1].greyout = true;
 
 		global.mainmenuButtons[2] = instance_create_layer(
@@ -45,6 +47,7 @@ function mainmenu()
 				);
 		global.mainmenuButtons[2].text = "Load Game";
 		global.mainmenuButtons[2].onClickFunc = loadMenuButton;
+		global.mainmenuButtons[2].sprite = spr_Button_NoEdge;
 
 		global.mainmenuButtons[3] = instance_create_layer(
 				xx,
@@ -54,6 +57,7 @@ function mainmenu()
 				);
 		global.mainmenuButtons[3].text = "Options";
 		global.mainmenuButtons[3].onClickFunc = optionMenuButton;
+		global.mainmenuButtons[3].sprite = spr_Button_NoEdge;
 		
 		global.mainmenuButtons[4] = instance_create_layer(
 				xx,
@@ -63,6 +67,7 @@ function mainmenu()
 				);
 		global.mainmenuButtons[4].text = "Exit";
 		global.mainmenuButtons[4].onClickFunc = exitMenuButton;
+		global.mainmenuButtons[4].sprite = spr_Button_NoEdge;
 	}	
 	
 	return global.mainmenuButtons;	
@@ -193,6 +198,7 @@ function loadMenuButton()
 			);
 	global.mainmenuButtons[4].text = "Back";
 	global.mainmenuButtons[4].onClickFunc = mainmenu;
+	global.mainmenuButtons[4].sprite = spr_Button_NoEdge;
 }
 
 function loadGameButton()

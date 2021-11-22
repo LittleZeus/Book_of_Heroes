@@ -1,7 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function item(_type,_sprite,_amount,_name,_desc,_rarity,_value,_equipmentSlot,_stats) constructor {
+function item(_id,_type,_sprite,_amount,_name,_desc,_rarity,_value,_equipmentSlot,_stats) constructor {
 	
+		if (_id == undefined) identifier = -1;
+		else identifier = _id;
 		if (_type == undefined) type = -1;
 		else type = _type;
 		if (_sprite == undefined) sprite = -1;
@@ -23,8 +25,9 @@ function item(_type,_sprite,_amount,_name,_desc,_rarity,_value,_equipmentSlot,_s
 			
 		equipable = false;
 	
-	set = function(_type, _sprite, _amount, _name, _desc, _rarity, _value, _equipmentSlot, _stats)
+	set = function(_id,_type, _sprite, _amount, _name, _desc, _rarity, _value, _equipmentSlot, _stats)
 	{
+		identifier = _id;
 		type = _type;
 		sprite = _sprite;
 		amount = _amount;
