@@ -12,6 +12,8 @@ fragRotation = array_create(fragAmount,0);
 fragRotationSpeed = array_create(fragAmount,1);
 fragScale = array_create(fragAmount,1);
 
+depth = 1;
+
 for (var _slot = 0; _slot <= 2; _slot++)
 {
 	var _filename = "save" + string(_slot) + ".sav";
